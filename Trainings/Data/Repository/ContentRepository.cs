@@ -7,7 +7,7 @@ using Data.Models;
 
 namespace Data.Repository
 {
-	class ContentRepository : Base<Content>
+	public class ContentRepository : Base<Content>
 	{
 	}
 }
