@@ -7,7 +7,7 @@ using Data.Models;
 
 namespace Data.Repository
 {
-	class ScheduleRepository : Base<Schedule>
+	public class ScheduleRepository : Base<Schedule>
 	{
 	}
 }
