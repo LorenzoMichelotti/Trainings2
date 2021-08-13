@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    class Content : Base
+    public class Content : Base
     {
         public string Name { get; set; }
         public string Picture { get; set; }
