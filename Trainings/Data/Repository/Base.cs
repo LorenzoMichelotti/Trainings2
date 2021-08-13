@@ -18,7 +18,7 @@ namespace Data.Repository
                     context.SaveChanges();
                 }
             }
-            public List<T> Read(T model)
+            public List<T> Read()
             {
                 List<T> list = new List<T>();
                 using (var context = new TrainingsContext())
