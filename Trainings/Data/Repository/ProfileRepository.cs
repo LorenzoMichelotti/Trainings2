@@ -7,7 +7,7 @@ using Data.Models;
 
 namespace Data.Repository
 {
-	class ProfileRepository : Base<Profile>
+	public class ProfileRepository : Base<Profile>
 	{
 	}
 }

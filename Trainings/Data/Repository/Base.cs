@@ -8,7 +8,7 @@ using Data.Models;
 
 namespace Data.Repository
 {
-    class Base<T> where T : Base
+    public class Base<T> where T : Base
     {
         public void Create(T model)
         {
