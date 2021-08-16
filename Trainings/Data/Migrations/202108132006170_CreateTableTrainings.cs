@@ -3,53 +3,10 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CreateTable : DbMigration
+    public partial class CreateTableTrainings : DbMigration
     {
         public override void Up()
         {
-            CreateTable(
-                "dbo.Contents",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        Picture = c.String(),
-                        Description = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.Evaluations",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Criteria = c.String(),
-                        Description = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.Profiles",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        Description = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.Schedules",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Hours = c.Int(nullable: false),
-                        Period = c.String(),
-                        StartDate = c.DateTime(nullable: false),
-                        EndDate = c.DateTime(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
-            
             CreateTable(
                 "dbo.Trainings",
                 c => new
@@ -85,10 +42,6 @@
             DropIndex("dbo.Trainings", new[] { "evaluation_Id" });
             DropIndex("dbo.Trainings", new[] { "content_Id" });
             DropTable("dbo.Trainings");
-            DropTable("dbo.Schedules");
-            DropTable("dbo.Profiles");
-            DropTable("dbo.Evaluations");
-            DropTable("dbo.Contents");
         }
     }
 }
